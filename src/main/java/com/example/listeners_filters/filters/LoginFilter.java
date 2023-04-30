@@ -1,4 +1,5 @@
 package com.example.listeners_filters.filters;
+
 import jakarta.servlet.*;
 import jakarta.servlet.annotation.WebFilter;
 import jakarta.servlet.http.HttpServletRequest;
@@ -33,7 +34,7 @@ public class LoginFilter implements Filter {
         if (user != null && passWord != null){
             filterChain.doFilter(servletRequest,servletResponse);
         }else{
-            ((HttpServletResponse) servletResponse).sendRedirect("loginFilters.jsp");
+            ((HttpServletResponse) servletResponse).sendError(406,"Lo sentimos pero no haz iniciado sesión");
         }
     }
 

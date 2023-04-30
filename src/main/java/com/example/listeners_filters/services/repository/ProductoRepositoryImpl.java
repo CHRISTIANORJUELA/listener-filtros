@@ -18,7 +18,7 @@ public class ProductoRepositoryImpl implements Repository<Product> {
     public List<Product> listar() throws SQLException {
         List<Product> products = new ArrayList<>();
         try (Statement stmt = conn.createStatement();
-             ResultSet rs = stmt.executeQuery("SELECT p.*, c.nombre as categoria FROM productos as p inner join categorias as c on(p.id_categorias=c.id)\" +\"ORDER BY p.ID ASC")) {
+             ResultSet rs = stmt.executeQuery("SELECT p.*, c.nombre as categoria FROM productos as p inner join categorias as c on(p.id_categorias=c.id)")){
              while (rs.next()) {
                  Product p = CreateProduct.createProduct(rs);
                  products.add(p);

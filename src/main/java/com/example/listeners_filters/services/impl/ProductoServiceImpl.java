@@ -52,13 +52,17 @@ public class ProductoServiceImpl implements Service<Product>{
     }
 
     @Override
-    public void delete() throws SQLException {
-
+    public void delete(Long id) throws SQLException {
+      try {
+          productRepository.delete(id);
+      }catch (SQLException e){
+          e.printStackTrace();
+      }
     }
 
     @Override
-    public void Update() {
-
+    public void Update(Long id,String newValue) {
+        productRepository.Update(id,newValue);
     }
 
 }

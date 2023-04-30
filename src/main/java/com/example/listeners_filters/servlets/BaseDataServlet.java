@@ -48,15 +48,6 @@ public class BaseDataServlet extends HttpServlet {
             values.ifPresentOrElse(x->{
                 actionBaseData.executeProcess(finalNameInput,x,req,resp,productoServiceImpl);
             },()->System.out.println("campo vacio"));
-            /*
-            if (!(req.getParameter(nameInput).equalsIgnoreCase(""))){
-                System.out.println(Arrays.toString(req.getParameterValues(nameInput)));
-                actionBaseData.executeProcess(nameInput,req,resp,productoServiceImpl);
-            }else{
-                System.out.println("campo vacio");
-            }
-
-             */
         }catch (NumberFormatException e) {
             System.out.println("campo vacio");
         }

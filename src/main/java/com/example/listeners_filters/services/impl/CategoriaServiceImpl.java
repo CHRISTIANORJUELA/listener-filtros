@@ -47,12 +47,12 @@ public class CategoriaServiceImpl implements Service<Categoria> {
     }
 
     @Override
-    public void delete() throws SQLException {
+    public void delete(Long id) throws SQLException {
 
     }
 
     @Override
-    public void Update() {
+    public void Update(Long id,String newValue) {
 
     }
 }

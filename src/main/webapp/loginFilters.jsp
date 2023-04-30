@@ -28,5 +28,12 @@
     <input type="submit" value="Login">
 </div>
 </form>
+<div>
+    <p>
+        Usuario: Maria
+        Clave : 1
+
+    </p>
+</div>
 </body>
 </html>
